@@ -17,30 +17,27 @@ public class Ejemplo01 {
         boolean bandera = true;
         int valor1 = ingresarValor();
         int valor2 = ingresarValor();
-        resultado = obtenerSuma(valor1, valor2);
+        int resultado = obtenerSuma(valor1, valor2);
+        imprimir(valor1, valor2,resultado);
     }
     public static int ingresarValor(){
-        boolean bandera = true;
+        int valor = 0;
         
-        while (bandera) {
-            try {
-                Scanner entrada = new Scanner(System.in);
+        try  {
+            boolean bandera =  true; 
+            while(bandera) {
                 System.out.println("Ingrese valor 1:");
-                int valor1 = entrada.nextInt();
-                System.out.println("Ingrese valor 2:");
-                int valor2 = entrada.nextInt(); 
-                int resultado = valor1 / valor2;
-
-                System.out.printf("Resultado %d\n", resultado);
+                valor = entrada.nextInt();
+                if (valor < 0 && valor %2 == 1){
+                    thro new Exception("valor no valido");
+                   
+                }
                 bandera = false;
-    }catch (InputMismatchException inputMismatchException) {
-
-                System.out.printf("Existe un error de tipo %s\n",
-                        inputMismatchException);
-            } catch (ArithmeticException arithmeticException) {
-
-                System.out.println("Lo sentimos hay un error");
-                System.out.printf("De tipo %s\n", arithmeticException);
+            }
+        }catch (Exceotion e){
+            System.out.printf("hay un error tipo %s\n",e)
+        }    
+        resur
     public static void imprimir(){
         
     }
