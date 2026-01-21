@@ -28,6 +28,11 @@ public class Ejemplo051 {
 
                 System.out.printf("Resultado %d\n", resultado);
                 bandera = false;
+                /*
+                En el ciclo nos pide ingresar valores por teclado para luego
+                verificar si la condicion se cumple, en el caso que no lo sea
+                se captura el error y se vuelve a pedir que ingrese los datos
+                */
             } catch (InputMismatchException inputMismatchException) {
 
                 System.out.printf("Existe un error de tipo %s\n",

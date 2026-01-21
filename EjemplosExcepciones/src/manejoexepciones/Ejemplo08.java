@@ -25,7 +25,10 @@ public class Ejemplo08 {
             double resultado2 = (double)resultado;
             System.out.printf("Resultado %.2f", resultado2);
         }
-        catch(Exception e){
+        catch(Exception e){/* La excepcion captura todo porque en ella no se
+            especifica el tipo de excepcion, mas bien es una excepcion
+            que engloba todos los tipos de excepcion
+            */
             
             System.out.printf(" Lo sentimos hay un error de tipo %s\n", e);
         
